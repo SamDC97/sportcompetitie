@@ -2,19 +2,19 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
-import {TeamModel} from '../models/team.model';
+import {CalendarModel} from '../models/calendar.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TeamService {
+export class CalendarService {
 
-  private teamsUrl = '/api/teams';
+  private calendarsUrl = '/api/calendars';
 
   constructor(private http: HttpClient) { }
 
-  getTeams(): Observable<TeamModel[]> {
-        return this.http.get<TeamModel[]>(this.teamsUrl).pipe(
+  getCalendars(): Observable<CalendarModel[]> {
+        return this.http.get<CalendarModel[]>(this.calendarsUrl).pipe(
             catchError(error => {
               return throwError(error.message);
             }

@@ -1,3 +1,6 @@
+import {CarModel} from "./car.model";
+import {DriverModel} from "./driver.model";
+
 export class TeamModel {
 
   id: number;
@@ -6,7 +9,7 @@ export class TeamModel {
   driverId1: number;
   driverId2: number;
 
-  car: Car;
-  driver1: Driver;
-  driver2: Driver;
+  car: CarModel;
+  driver1: DriverModel;
+  driver2: DriverModel;
 }

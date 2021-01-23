@@ -2,19 +2,19 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
-import {DriverModel} from "../models/driver.model";
+import {CircuitModel} from "../models/circuit.model";
 
 @Injectable({
   providedIn: 'root'
 })
-export class DriverService {
+export class CircuitService {
 
-  private driversUrl = '/api/drivers';
+  private circuitsUrl = '/api/circuits';
 
   constructor(private http: HttpClient) { }
 
-  getDrivers(): Observable<DriverModel[]> {
-      return this.http.get<DriverModel[]>(this.driversUrl).pipe(
+  getCircuits(): Observable<CircuitModel[]> {
+      return this.http.get<CircuitModel[]>(this.circuitsUrl).pipe(
           catchError(error => {
             return throwError(error.message);
           }

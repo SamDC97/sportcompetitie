@@ -3,16 +3,32 @@
     "target": "http://localhost:7072",
     "secure": false
   },
-  "/api/sauces": {
-    "target": "http://localhost:9002",
+  "/api/cars": {
+    "target": "http://localhost:7071",
     "secure": false
   },
-  "/api/belegs": {
-    "target": "http://localhost:9000",
+  "/api/teams": {
+    "target": "http://localhost:7070",
     "secure": false
   },
-  "/api/bestellingen": {
-    "target": "http://localhost:9999",
+  "/api/circuits": {
+    "target": "http://localhost:7073",
+    "secure": false
+  },
+  "/api/calendars": {
+    "target": "http://localhost:7074",
+    "secure": false
+  },
+  "/api/generate-calendar": {
+    "target": "http://localhost:7074",
+    "secure": false
+  },
+  "/api/generate-races": {
+    "target": "http://localhost:7076",
+    "secure": false
+  },
+  "/api/races": {
+    "target": "http://localhost:7076",
     "secure": false
   }
 }

@@ -1,0 +1,7 @@
+<label>Races</label>
+
+<ul>
+  <li *ngFor="let race of races; index as i">ID: {{race.id}}, Circuit: {{race.circuitId}} <br>
+    <!-- <div *ngFor="let position of race.positions"> Driver ID:{{position.driverId}} - Rank: {{position.rank}} - Points: {{position.points}}</div> -->
+  </li>
+</ul>

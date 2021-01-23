@@ -1,0 +1,5 @@
+<label>Calendars</label>
+
+<ul>
+  <li *ngFor="let calendar of calendars; index as i">ID: {{calendar.id}} - Order:{{calendar.orderInCalendar}} - {{calendar.circuit.name}} - {{calendar.dateOfRace}}</li>
+</ul>
