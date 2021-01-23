@@ -1,0 +1,18 @@
+{
+  "/api/drivers": {
+    "target": "http://localhost:7072",
+    "secure": false
+  },
+  "/api/sauces": {
+    "target": "http://localhost:9002",
+    "secure": false
+  },
+  "/api/belegs": {
+    "target": "http://localhost:9000",
+    "secure": false
+  },
+  "/api/bestellingen": {
+    "target": "http://localhost:9999",
+    "secure": false
+  }
+}
