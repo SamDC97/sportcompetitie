@@ -11,6 +11,10 @@
     "target": "http://localhost:7070",
     "secure": false
   },
+  "/api/team/": {
+    "target": "http://localhost:7070",
+    "secure": false
+  },
   "/api/circuits": {
     "target": "http://localhost:7073",
     "secure": false

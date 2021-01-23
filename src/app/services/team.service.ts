@@ -10,14 +10,28 @@ import {TeamModel} from '../models/team.model';
 export class TeamService {
 
   private teamsUrl = '/api/teams';
+  private teamUrl = '/api/team/';
 
   constructor(private http: HttpClient) { }
 
   getTeams(): Observable<TeamModel[]> {
-        return this.http.get<TeamModel[]>(this.teamsUrl).pipe(
-            catchError(error => {
-              return throwError(error.message);
-            }
-        ));
-    }
+    return this.http.get<TeamModel[]>(this.teamsUrl).pipe(
+        catchError(error => {
+          return throwError(error.message);
+        }));
+  }
+
+  getByID(id: number): Observable<TeamModel>{
+    return this.http.get<TeamModel>(this.teamUrl + id);
+  }
+
+
+  getTeamById(id: number): Observable<TeamModel> {
+    this.teamUrl = this.teamUrl + id;
+    console.log(this.teamUrl);
+      return this.http.get<TeamModel>(this.teamUrl).pipe(
+          catchError(error => {
+            return throwError(error.message);
+          }));
+  }
 }

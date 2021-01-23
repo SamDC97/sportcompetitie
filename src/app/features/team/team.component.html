@@ -1,5 +1,13 @@
-<label>Teams</label>
+<div class="container">
+  <h2>Teams</h2><br>
 
-<div class="row" *ngFor="let team of teams; index as i">
-  <a>{{team.name}}</a>
+  <div class="row">
+    <div class="col-sm">
+      <div *ngFor="let team of teams; index as i">
+        <a style="cursor: pointer" class="text-primary" (click)="onSelect(team.id)">{{team.name}}</a>
+      </div>
+    </div>
+  </div>
 </div>
+
+

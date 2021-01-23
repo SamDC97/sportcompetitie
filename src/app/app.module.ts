@@ -11,6 +11,7 @@ import { CarComponent } from './features/car/car.component';
 import { CircuitComponent } from './features/circuit/circuit.component';
 import { CalendarComponent } from './features/calendar/calendar.component';
 import { RaceComponent } from './features/race/race.component';
+import { TeamDetailsComponent } from './features/team-details/team-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RaceComponent } from './features/race/race.component';
     CarComponent,
     CircuitComponent,
     CalendarComponent,
-    RaceComponent
+    RaceComponent,
+    TeamDetailsComponent
   ],
   imports: [
     BrowserModule,
