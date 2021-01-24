@@ -44,7 +44,15 @@
     "secure": false
   },
   "/api/races": {
-    "target": "http://localhost:7076",
+  "target": "http://localhost:7076",
+  "secure": false
+  },
+  "/api/team-statistics": {
+    "target": "http://localhost:7077",
+    "secure": false
+  },
+  "/api/driver-statistics": {
+    "target": "http://localhost:7077",
     "secure": false
   }
 }

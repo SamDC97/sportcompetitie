@@ -11,6 +11,8 @@ import {CircuitDetailsComponent} from './features/circuit-details/circuit-detail
 import {CalendarComponent} from './features/calendar/calendar.component';
 import {RaceComponent} from './features/race/race.component';
 import {RaceDetailsComponent} from './features/race-details/race-details.component';
+import {TeamStatisticsComponent} from './features/team-statistics/team-statistics.component';
+import {DriverStatisticsComponent} from './features/driver-statistics/driver-statistics.component';
 
 
 const routes: Routes = [
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path: 'circuits/:id', component: CircuitDetailsComponent},
   {path: 'calendars', component: CalendarComponent},
   {path: 'races', component: RaceComponent},
-  {path: 'races/:id', component: RaceDetailsComponent}
+  {path: 'races/:id', component: RaceDetailsComponent},
+  {path: 'driver-statistics', component: DriverStatisticsComponent},
+  {path: 'team-statistics', component: TeamStatisticsComponent}
 ];
 
 @NgModule({
