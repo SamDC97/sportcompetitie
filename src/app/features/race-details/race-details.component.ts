@@ -33,6 +33,10 @@ export class RaceDetailsComponent implements OnInit {
     this.router.navigate(['/drivers/', id]);
   }
 
+  onSelectCircuit(id: number){
+    this.router.navigate(['/circuits/', id]);
+  }
+
   getDriverNames(){
     for (let position of this.race.positions){
       this.driverService.getByID(position.driverId).subscribe(data => position.driverName = data.name);

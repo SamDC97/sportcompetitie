@@ -1,1 +1,11 @@
-<p>start-page works!</p>
+<div class="container">
+  <p>
+    Please enter how many days are in one calendar:
+    <input #amountOfRaces type="number">
+    <button (click)="submitAmountOfRaces(amountOfRaces.value)" type="button" class="btn btn-primary">Submit</button>
+
+  </p>
+  <div *ngIf="amountOfRaces1">
+    Amount of races is confirmed: {{amountOfRaces1}}
+  </div>
+</div>

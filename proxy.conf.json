@@ -35,7 +35,7 @@
     "target": "http://localhost:7074",
     "secure": false
   },
-  "/api/generate-calendar": {
+  "/api/generate-calendar/": {
     "target": "http://localhost:7074",
     "secure": false
   },

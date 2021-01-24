@@ -6,6 +6,7 @@ export class CalendarModel {
   orderInCalendar: string;
   circuitId: number;
   dateOfRace: Date;
+  raceId: number;
 
   circuit: CircuitModel;
 }

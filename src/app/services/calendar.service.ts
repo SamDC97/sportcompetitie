@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
@@ -10,11 +11,12 @@ import {CalendarModel} from '../models/calendar.model';
 export class CalendarService {
 
   private calendarsUrl = '/api/calendars';
-  private calendarUrl = '/api/calendar/';
+  private calendarUrl = '/api/generate-calendar/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   getCalendars(): Observable<CalendarModel[]> {
+    console.log(this.calendarsUrl);
       return this.http.get<CalendarModel[]>(this.calendarsUrl).pipe(
           catchError(error => {
             return throwError(error.message);
@@ -22,7 +24,9 @@ export class CalendarService {
       ));
   }
 
-  getByID(id: number): Observable<CalendarModel>{
-    return this.http.get<CalendarModel>(this.calendarUrl + id);
+  generateCalendars(numberOfRaces: number): void{
+    console.log(this.calendarUrl + numberOfRaces);
+    this.http.post(this.calendarUrl + numberOfRaces, null).subscribe();
+    this.router.navigate(['/calendars/']);
   }
 }

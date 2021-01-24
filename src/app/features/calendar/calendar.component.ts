@@ -18,8 +18,8 @@ export class CalendarComponent implements OnInit {
     this.calendarService.getCalendars().subscribe(data => this.calendars = data);
   }
 
-  onSelectCalendar(id: number){
-    this.router.navigate(['/circuits/', id]);
+  onSelectRace(id: number){
+    this.router.navigate(['/races/', id]);
   }
 
 }

@@ -1,9 +1,9 @@
 <div class="container">
-  <h2>Calendars</h2>
+  <h2>Calendar</h2>
 
   <ul>
     <li *ngFor="let calendar of calendars">
-      <a style="cursor: pointer" class="text-primary" (click)="onSelectCalendar(calendar.circuit.id)">{{calendar.dateOfRace}}: {{calendar.circuit.name}}</a>
+      <a style="cursor: pointer" class="text-primary" (click)="onSelectRace(calendar.raceId)">{{calendar.dateOfRace}}: {{calendar.circuit.name}}</a>
     </li>
   </ul>
 </div>
