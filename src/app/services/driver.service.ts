@@ -10,6 +10,7 @@ import {DriverModel} from "../models/driver.model";
 export class DriverService {
 
   private driversUrl = '/api/drivers';
+  private driverUrl = '/api/driver/';
 
   constructor(private http: HttpClient) { }
 
@@ -19,5 +20,9 @@ export class DriverService {
             return throwError(error.message);
           }
       ));
+  }
+
+  getByID(id: number): Observable<DriverModel>{
+      return this.http.get<DriverModel>(this.driverUrl + id);
   }
 }

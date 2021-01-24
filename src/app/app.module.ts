@@ -12,6 +12,12 @@ import { CircuitComponent } from './features/circuit/circuit.component';
 import { CalendarComponent } from './features/calendar/calendar.component';
 import { RaceComponent } from './features/race/race.component';
 import { TeamDetailsComponent } from './features/team-details/team-details.component';
+import { DriverDetailsComponent } from './features/driver-details/driver-details.component';
+import { CarDetailsComponent } from './features/car-details/car-details.component';
+import { CircuitDetailsComponent } from './features/circuit-details/circuit-details.component';
+import { RaceDetailsComponent } from './features/race-details/race-details.component';
+import { DriverStatisticsComponent } from './features/driver-statistics/driver-statistics.component';
+import { TeamStatisticsComponent } from './features/team-statistics/team-statistics.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { TeamDetailsComponent } from './features/team-details/team-details.compo
     CircuitComponent,
     CalendarComponent,
     RaceComponent,
-    TeamDetailsComponent
+    TeamDetailsComponent,
+    DriverDetailsComponent,
+    CarDetailsComponent,
+    CircuitDetailsComponent,
+    RaceDetailsComponent,
+    DriverStatisticsComponent,
+    TeamStatisticsComponent
   ],
   imports: [
     BrowserModule,

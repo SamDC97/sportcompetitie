@@ -1,0 +1,8 @@
+<div class="container">
+    <h2>{{team.name}}</h2>
+    <div>
+      <a style="cursor: pointer" class="text-primary" (click)="onSelectDriver(team.driver1.id)">Driver1: {{team.driver1.name}} </a><br>
+      <a style="cursor: pointer" class="text-primary" (click)="onSelectDriver(team.driver2.id)">Driver2: {{team.driver2.name}} </a><br>
+      <a style="cursor: pointer" class="text-primary" (click)="onSelectCar(team.car.id)">Car: {{team.car.name}} </a><br>
+    </div>
+</div>

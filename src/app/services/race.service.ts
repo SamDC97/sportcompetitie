@@ -10,14 +10,19 @@ import {RaceModel} from '../models/race.model';
 export class RaceService {
 
   private racesUrl = '/api/races';
+  private raceUrl = '/api/races/';
 
   constructor(private http: HttpClient) { }
 
   getRaces(): Observable<RaceModel[]> {
-      return this.http.get<RaceModel[]>(this.racesUrl).pipe(
-          catchError(error => {
-            return throwError(error.message);
-          }
-      ));
+    return this.http.get<RaceModel[]>(this.racesUrl).pipe(
+        catchError(error => {
+          return throwError(error.message);
+        }
+    ));
+  }
+
+  getByID(id: number): Observable<RaceModel>{
+      return this.http.get<RaceModel>(this.raceUrl + id);
   }
 }

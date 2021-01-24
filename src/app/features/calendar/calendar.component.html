@@ -1,5 +1,7 @@
 <label>Calendars</label>
 
 <ul>
-  <li *ngFor="let calendar of calendars; index as i">ID: {{calendar.id}} - Order:{{calendar.orderInCalendar}} - {{calendar.circuit.name}} - {{calendar.dateOfRace}}</li>
+  <li *ngFor="let calendar of calendars; index as i">
+    <a style="cursor: pointer" class="text-primary" (click)="onSelectCalendar(calendar.circuit.id)">{{calendar.dateOfRace}}: {{calendar.circuit.name}}</a>
+  </li>
 </ul>

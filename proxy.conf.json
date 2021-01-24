@@ -3,7 +3,15 @@
     "target": "http://localhost:7072",
     "secure": false
   },
+  "/api/driver/": {
+    "target": "http://localhost:7072",
+    "secure": false
+  },
   "/api/cars": {
+    "target": "http://localhost:7071",
+    "secure": false
+  },
+  "/api/car/": {
     "target": "http://localhost:7071",
     "secure": false
   },
@@ -16,6 +24,10 @@
     "secure": false
   },
   "/api/circuits": {
+    "target": "http://localhost:7073",
+    "secure": false
+  },
+  "/api/circuit/": {
     "target": "http://localhost:7073",
     "secure": false
   },

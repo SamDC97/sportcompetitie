@@ -4,8 +4,8 @@ export class CalendarModel {
 
   id: number;
   orderInCalendar: string;
-  gpId: number;
+  circuitId: number;
   dateOfRace: Date;
 
-  circuit: CircuitModel
+  circuit: CircuitModel;
 }

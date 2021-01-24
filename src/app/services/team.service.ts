@@ -26,12 +26,12 @@ export class TeamService {
   }
 
 
-  getTeamById(id: number): Observable<TeamModel> {
-    this.teamUrl = this.teamUrl + id;
-    console.log(this.teamUrl);
-      return this.http.get<TeamModel>(this.teamUrl).pipe(
-          catchError(error => {
-            return throwError(error.message);
-          }));
-  }
+  //getTeamById(id: number): Observable<TeamModel> {
+  // this.teamUrl = this.teamUrl + id;
+  //  console.log(this.teamUrl);
+  //    return this.http.get<TeamModel>(this.teamUrl).pipe(
+  //        catchError(error => {
+  //          return throwError(error.message);
+  //        }));
+  //}
 }

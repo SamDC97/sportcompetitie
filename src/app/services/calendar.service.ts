@@ -10,14 +10,19 @@ import {CalendarModel} from '../models/calendar.model';
 export class CalendarService {
 
   private calendarsUrl = '/api/calendars';
+  private calendarUrl = '/api/calendar/';
 
   constructor(private http: HttpClient) { }
 
   getCalendars(): Observable<CalendarModel[]> {
-        return this.http.get<CalendarModel[]>(this.calendarsUrl).pipe(
-            catchError(error => {
-              return throwError(error.message);
-            }
-        ));
-    }
+      return this.http.get<CalendarModel[]>(this.calendarsUrl).pipe(
+          catchError(error => {
+            return throwError(error.message);
+          }
+      ));
+  }
+
+  getByID(id: number): Observable<CalendarModel>{
+    return this.http.get<CalendarModel>(this.calendarUrl + id);
+  }
 }

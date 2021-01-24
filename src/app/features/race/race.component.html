@@ -1,7 +1,8 @@
-<label>Races</label>
+<h2>Races</h2>
 
 <ul>
-  <li *ngFor="let race of races; index as i">ID: {{race.id}}, Circuit: {{race.circuitId}} <br>
-    <!-- <div *ngFor="let position of race.positions"> Driver ID:{{position.driverId}} - Rank: {{position.rank}} - Points: {{position.points}}</div> -->
+  <li *ngFor="let race of races; index as i">
+    <a style="cursor: pointer" class="text-primary" (click)="onSelectRace(race.id)">ID: {{race.id}}, Circuit: {{race.circuitId}} </a>
+
   </li>
 </ul>

@@ -10,6 +10,7 @@ import {CircuitModel} from "../models/circuit.model";
 export class CircuitService {
 
   private circuitsUrl = '/api/circuits';
+  private circuitUrl = '/api/circuit/';
 
   constructor(private http: HttpClient) { }
 
@@ -20,4 +21,9 @@ export class CircuitService {
           }
       ));
   }
+
+  getByID(id: number): Observable<CircuitModel>{
+    return this.http.get<CircuitModel>(this.circuitUrl + id);
+  }
+
 }

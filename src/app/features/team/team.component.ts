@@ -12,7 +12,7 @@ export class TeamComponent implements OnInit {
 
   teams!: TeamModel[];
 
-  constructor(private teamService : TeamService, private router: Router) { }
+  constructor(private teamService : TeamService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.teamService.getTeams().subscribe(data => this.teams = data);
