@@ -13,10 +13,13 @@ import {RaceComponent} from './features/race/race.component';
 import {RaceDetailsComponent} from './features/race-details/race-details.component';
 import {TeamStatisticsComponent} from './features/team-statistics/team-statistics.component';
 import {DriverStatisticsComponent} from './features/driver-statistics/driver-statistics.component';
+import {PagenotfoundComponent} from './features/pagenotfound/pagenotfound.component';
+import {StartPageComponent} from './features/start-page/start-page.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: '/teams', pathMatch: 'full'},
+  {path: '', redirectTo: '/start-page', pathMatch: 'full'},
+  {path: 'start-page', component: StartPageComponent},
   {path: 'drivers', component: DriverComponent},
   {path: 'drivers/:id', component: DriverDetailsComponent},
   {path: 'cars', component: CarComponent},
@@ -29,7 +32,8 @@ const routes: Routes = [
   {path: 'races', component: RaceComponent},
   {path: 'races/:id', component: RaceDetailsComponent},
   {path: 'driver-statistics', component: DriverStatisticsComponent},
-  {path: 'team-statistics', component: TeamStatisticsComponent}
+  {path: 'team-statistics', component: TeamStatisticsComponent},
+  {path: '**', component: PagenotfoundComponent}
 ];
 
 @NgModule({

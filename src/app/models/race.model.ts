@@ -5,4 +5,6 @@ export class RaceModel {
   id: number;
   positions: PositionModel[];
   circuitId: number;
+
+  circuitName: string;
 }

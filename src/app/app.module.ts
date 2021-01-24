@@ -18,6 +18,8 @@ import { CircuitDetailsComponent } from './features/circuit-details/circuit-deta
 import { RaceDetailsComponent } from './features/race-details/race-details.component';
 import { DriverStatisticsComponent } from './features/driver-statistics/driver-statistics.component';
 import { TeamStatisticsComponent } from './features/team-statistics/team-statistics.component';
+import { PagenotfoundComponent } from './features/pagenotfound/pagenotfound.component';
+import { StartPageComponent } from './features/start-page/start-page.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { TeamStatisticsComponent } from './features/team-statistics/team-statist
     CircuitDetailsComponent,
     RaceDetailsComponent,
     DriverStatisticsComponent,
-    TeamStatisticsComponent
+    TeamStatisticsComponent,
+    PagenotfoundComponent,
+    StartPageComponent
   ],
   imports: [
     BrowserModule,

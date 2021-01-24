@@ -25,7 +25,6 @@ export class TeamService {
     return this.http.get<TeamModel>(this.teamUrl + id);
   }
 
-
   //getTeamById(id: number): Observable<TeamModel> {
   // this.teamUrl = this.teamUrl + id;
   //  console.log(this.teamUrl);

@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>{{race.circuitId}}</h2>
+  <h2>{{race.circuitName}}</h2>
   <div>
     <table class="table">
       <thead>
@@ -12,7 +12,7 @@
       <tbody>
       <tr *ngFor="let position of race.positions">
         <th scope="row">{{position.rank}}</th>
-        <td>{{position.driverId}}</td>
+        <td><a style="cursor: pointer" class="text-primary" (click)="onSelectDriver(position.driverId)">{{position.driverName}}</a></td>
         <td>{{position.points}}</td>
       </tr>
       </tbody>

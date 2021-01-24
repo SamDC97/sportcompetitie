@@ -1,7 +1,8 @@
-<label>Circuits</label>
-
-<ul>
-  <li *ngFor="let circuit of circuits; index as i">
-    <a style="cursor: pointer" class="text-primary" (click)="onSelectCircuit(circuit.id)">{{circuit.name}}</a>
-  </li>
-</ul>
+<div class="container">
+  <h2>Circuits</h2>
+  <ul>
+    <li *ngFor="let circuit of circuits">
+      <a style="cursor: pointer" class="text-primary" (click)="onSelectCircuit(circuit.id)">{{circuit.name}}</a>
+    </li>
+  </ul>
+</div>

@@ -19,5 +19,4 @@ export class DriverDetailsComponent implements OnInit {
     this.driverService.getByID(id)
       .subscribe(data => this.driver = data);
   }
-
 }

@@ -1,8 +1,9 @@
-<h2>Races</h2>
+<div class="container">
+  <h2>Races</h2>
 
-<ul>
-  <li *ngFor="let race of races; index as i">
-    <a style="cursor: pointer" class="text-primary" (click)="onSelectRace(race.id)">ID: {{race.id}}, Circuit: {{race.circuitId}} </a>
-
-  </li>
-</ul>
+  <ul>
+    <li *ngFor="let race of races;">
+      <a style="cursor: pointer" class="text-primary" (click)="onSelectRace(race.id)">{{race.circuitName}} </a>
+    </li>
+  </ul>
+</div>
