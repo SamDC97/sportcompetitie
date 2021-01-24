@@ -1,1 +1,23 @@
-<p>driver-statistics works!</p>
+<div class="container">
+  <h2>Driver Standings</h2>
+  <div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Driver</th>
+        <th scope="col">Team</th>
+        <th scope="col">Points</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let driverStatistics of driverStatisticsList; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td><a style="cursor: pointer" class="text-primary" (click)="onSelectDriver(driverStatistics.driver.id)">{{driverStatistics.driver.name}}</a></td>
+        <td><a style="cursor: pointer" class="text-primary" (click)="onSelectTeam(driverStatistics.team.id)">{{driverStatistics.team.name}}</a></td>
+        <td>{{driverStatistics.points}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,1 +1,21 @@
-<p>team-statistics works!</p>
+<div class="container">
+  <h2>Team Standings</h2>
+  <div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Team</th>
+        <th scope="col">Points</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let teamStatistics of teamStatisticsList; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td><a style="cursor: pointer" class="text-primary" (click)="onSelectTeam(teamStatistics.team.id)">{{teamStatistics.team.name}}</a></td>
+        <td>{{teamStatistics.points}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
